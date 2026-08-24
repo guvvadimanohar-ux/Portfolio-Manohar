@@ -11,18 +11,55 @@ import {
   RapierRigidBody,
 } from "@react-three/rapier";
 
+function createSkillTexture(skillName: string, bgColor: string, textColor: string = "#ffffff"): THREE.CanvasTexture {
+  const canvas = document.createElement("canvas");
+  canvas.width = 512;
+  canvas.height = 512;
+  const ctx = canvas.getContext("2d")!;
+
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0, 0, 512, 512);
+
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+  ctx.lineWidth = 14;
+  ctx.strokeRect(16, 16, 480, 480);
+
+  ctx.fillStyle = textColor;
+  ctx.font = "bold 64px system-ui, -apple-system, sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(skillName, 256, 256);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.needsUpdate = true;
+  return texture;
+}
+
 const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
+const resumeImageUrls = [
   "/images/node2.webp",
   "/images/express.webp",
   "/images/mongo.webp",
   "/images/mysql.webp",
-  "/images/typescript.webp",
   "/images/javascript.webp",
 ];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+
+const imageTextures = resumeImageUrls.map((url) => textureLoader.load(url));
+
+const generatedSkillTextures = [
+  createSkillTexture("Python", "#306998"),
+  createSkillTexture("Java", "#e76f00"),
+  createSkillTexture("SQL", "#00758f"),
+  createSkillTexture("HTML", "#e34f26"),
+  createSkillTexture("CSS", "#1572b6"),
+  createSkillTexture("Git", "#f05032"),
+  createSkillTexture("Power BI", "#f2c811", "#000000"),
+  createSkillTexture("Tableau", "#e97627"),
+  createSkillTexture("Linux", "#333333"),
+  createSkillTexture("Postgres", "#336791"),
+];
+
+const textures = [...imageTextures, ...generatedSkillTextures];
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
