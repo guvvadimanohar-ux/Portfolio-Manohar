@@ -1,65 +1,20 @@
-# My Portfolio Website - Overview 🚀
+# My Portfolio
 
-This repository contains the open-source version of my personal portfolio website.  
-Feel free to explore the code and use it for learning and inspiration.
+A personal portfolio website featuring an interactive 3D character model and a custom animated cursor for an engaging user experience. Built and deployed on Vercel.
 
----
+## Features
+- 🎨 Interactive 3D figure/model rendered in the browser
+- 🖱️ Custom animated mouse cursor
+- ⚡ Fast, responsive design
+- 🚀 Deployed on Vercel
 
-## ⚠️ Usage Notice
+## Tech Stack
+- [Add your framework, e.g. React / Next.js]
+- [Add your 3D library, e.g. Three.js / React Three Fiber]
+- [Add styling tool, e.g. Tailwind CSS]
 
-This project is shared for learning purposes only.
+## Acknowledgements
+This project was inspired by and adapted from open-source portfolio templates for the 3D model integration and cursor interaction. Huge thanks to the original creators for sharing their work.
 
-Please do NOT:
-- Clone or replicate the full website or design
-- Repost it with minor content changes
-- Use this project for commercial/client work
-- Create tutorials or content using this exact project
-
-If you use parts of the code, you must provide proper credit linking back to the original repository.
-
-Build your own version — don’t just copy.
-
-— Moncy Yohannan
-
----
-
-## 🛠️ Instructions
-
-I have modified the GSAP Club plugins using trial versions.  
-⚠️ Note: Trial plugins cannot be used for production or hosting.
-
-For official GSAP Club plugins, refer here:  
-https://gsap.com/docs/v3/Installation/
-
----
-
-## ⚙️ Tech Stack
-
-React • TypeScript • GSAP • Three.js • WebGL • HTML • CSS • JavaScript
-
----
-
-## 🎨 Assets Usage
-
-Some 3D assets included in this repository are free to use for learning purposes.
-
-However:
-
-- The original 3D avatar used on my live portfolio is NOT included in this repository
-- That avatar is a custom asset created over ~1 month
-- It is not open source and not available for reuse
-
-Any usage, extraction, or redistribution of that avatar from my live website is strictly prohibited.
-
----
-
-![Protfolio-Preview](https://github.com/user-attachments/assets/3c4557e7-6392-4928-b8a9-7b2476ef4edd)
-
----
-
-## 📄 License
-
-This project is licensed under the Personal Portfolio License (PPL) v1.0.
-
-See the LICENSE file for full details
-
+## Live Demo
+[your-vercel-url.vercel.app]
