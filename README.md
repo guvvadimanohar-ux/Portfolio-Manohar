@@ -17,4 +17,4 @@ A personal portfolio website featuring an interactive 3D character model and a c
 This project was inspired by and adapted from open-source portfolio templates for the 3D model integration and cursor interaction. Huge thanks to the original creators for sharing their work.
 
 ## Live Demo
-[your-vercel-url.vercel.app]
+https://portfolio-manohar-bay.vercel.app/
