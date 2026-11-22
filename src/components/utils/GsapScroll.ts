@@ -38,7 +38,7 @@ export function setCharTimeline(
   });
   let screenLight: any, monitor: any;
   character?.children.forEach((object: any) => {
-    if (object.name === "Plane004" || object.name === "Plane.004") {
+    if (object.name === "Plane004") {
       object.children.forEach((child: any) => {
         child.material.transparent = true;
         child.material.opacity = 0;
@@ -48,7 +48,7 @@ export function setCharTimeline(
         }
       });
     }
-    if (object.name === "screenlight" || object.name === "screenLight") {
+    if (object.name === "screenlight") {
       object.material.transparent = true;
       object.material.opacity = 0;
       object.material.emissive.set("#C8BFFF");
@@ -60,9 +60,7 @@ export function setCharTimeline(
       screenLight = object;
     }
   });
-  let neckBone =
-    character?.getObjectByName("spine005") ||
-    character?.getObjectByName("spine.005");
+  let neckBone = character?.getObjectByName("spine005");
   if (window.innerWidth > 1024) {
     if (character) {
       tl1
@@ -87,31 +85,20 @@ export function setCharTimeline(
           { pointerEvents: "none", x: "-12%", delay: 2, duration: 5 },
           0
         )
-        .to(character.rotation, { y: 0.92, x: 0.12, delay: 3, duration: 3 }, 0);
-
-      if (neckBone?.rotation) {
-        tl2.to(neckBone.rotation, { x: 0.6, delay: 2, duration: 3 }, 0);
-      }
-      if (monitor?.material) {
-        tl2.to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0);
-      }
-      if (screenLight?.material) {
-        tl2.to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0);
-      }
-      if (monitor?.position) {
-        tl2.fromTo(
-          monitor.position,
-          { y: -10, z: 2 },
-          { y: 0, z: 0, delay: 1.5, duration: 3 },
-          0
-        );
-      }
-
-      tl2
+        .to(character.rotation, { y: 0.92, x: 0.12, delay: 3, duration: 3 }, 0)
+        .to(neckBone!.rotation, { x: 0.6, delay: 2, duration: 3 }, 0)
+        .to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0)
+        .to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0)
         .fromTo(
           ".what-box-in",
           { display: "none" },
           { display: "flex", duration: 0.1, delay: 6 },
+          0
+        )
+        .fromTo(
+          monitor.position,
+          { y: -10, z: 2 },
+          { y: 0, z: 0, delay: 1.5, duration: 3 },
           0
         )
         .fromTo(

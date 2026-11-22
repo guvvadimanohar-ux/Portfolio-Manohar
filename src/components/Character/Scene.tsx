@@ -61,14 +61,8 @@ const Scene = () => {
           let character = gltf.scene;
           setChar(character);
           scene.add(character);
-          headBone =
-            character.getObjectByName("spine006") ||
-            character.getObjectByName("spine.006") ||
-            null;
-          screenLight =
-            character.getObjectByName("screenlight") ||
-            character.getObjectByName("screenLight") ||
-            null;
+          headBone = character.getObjectByName("spine006") || null;
+          screenLight = character.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();
@@ -112,9 +106,8 @@ const Scene = () => {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
-      let animId: number;
       const animate = () => {
-        animId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -134,7 +127,6 @@ const Scene = () => {
       };
       animate();
       return () => {
-        cancelAnimationFrame(animId);
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
