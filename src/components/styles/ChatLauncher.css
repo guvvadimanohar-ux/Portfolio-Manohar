@@ -16,11 +16,17 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   z-index: 9999;
   font-family: inherit;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .chat-launcher:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 6px 24px rgba(196, 129, 255, 0.6);
+}
+
+.chat-launcher:active {
+  transform: scale(0.96);
 }
 
 .chat-launcher-icon {
@@ -33,4 +39,20 @@
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  .chat-launcher {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.55rem 0.9rem;
+    gap: 0.4rem;
+  }
+  .chat-launcher-icon {
+    font-size: 1rem;
+  }
+  .chat-launcher-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.8px;
+  }
 }

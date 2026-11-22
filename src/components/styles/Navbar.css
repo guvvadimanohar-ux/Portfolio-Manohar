@@ -76,6 +76,30 @@
   font-size: 13px;
   color: var(--accentColor, #c481ff);
 }
+.resume-btn-short {
+  display: none;
+}
+@media only screen and (max-width: 540px) {
+  .navbar-left {
+    gap: 8px;
+  }
+  .navbar-resume-btn {
+    padding: 3px 8px;
+    font-size: 10px;
+    gap: 4px;
+    letter-spacing: 0.5px;
+  }
+  .resume-btn-full {
+    display: none;
+  }
+  .resume-btn-short {
+    display: inline;
+    letter-spacing: 0.8px;
+  }
+  .navbar-resume-btn svg {
+    font-size: 11px;
+  }
+}
 @media only screen and (min-width: 500px) {
   .header {
     padding: 20px 0px;

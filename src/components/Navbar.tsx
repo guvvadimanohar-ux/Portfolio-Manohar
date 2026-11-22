@@ -52,8 +52,12 @@ const Navbar = () => {
             target="_blank"
             rel="noreferrer"
             className="navbar-resume-btn"
+            aria-label="View Resume"
           >
-            <HoverLinks text="VIEW RESUME" />
+            <span className="resume-btn-full">
+              <HoverLinks text="VIEW RESUME" />
+            </span>
+            <span className="resume-btn-short">RESUME</span>
             <TbNotes />
           </a>
         </div>
