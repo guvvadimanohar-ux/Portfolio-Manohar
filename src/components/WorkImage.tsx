@@ -28,7 +28,9 @@ const WorkImage = (props: Props) => {
         href={props.link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={() => setIsVideo(false)}
-        target="_blank"
+        target={props.link ? "_blank" : undefined}
+        rel={props.link ? "noopener noreferrer" : undefined}
+        onClick={!props.link ? (e) => e.preventDefault() : undefined}
         data-cursor={"disable"}
       >
         {props.link && (
@@ -36,7 +38,7 @@ const WorkImage = (props: Props) => {
             <MdArrowOutward />
           </div>
         )}
-        <img src={props.image} alt={props.alt} />
+        <img src={props.image} alt={props.alt} loading="lazy" decoding="async" />
         {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
       </a>
     </div>
