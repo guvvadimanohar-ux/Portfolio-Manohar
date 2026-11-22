@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am a Computer Science student and Data Analyst Intern passionate about building full-stack web applications and extracting data-driven insights. Skilled in Python, SQL, JavaScript, Node.js, Express.js, MySQL, and Power BI, with hands-on experience developing centralized management platforms and building interactive dashboards.
+          Computer Science Engineering graduate and aspiring Data Scientist with hands-on experience in Python, SQL, data analysis, and data-driven application development. Interested in Generative AI and Agentic AI, with working knowledge of LLMs, RAG, prompt engineering, and LangGraph. Strong analytical and problem-solving skills with an interest in data quality and workflow automation. Aiming to start my career in Generative AI, AI/ML, or Data Science, building efficient solutions that turn data into real-world impact.
         </p>
       </div>
     </div>
