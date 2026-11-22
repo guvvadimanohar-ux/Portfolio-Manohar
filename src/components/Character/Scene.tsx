@@ -32,7 +32,7 @@ const Scene = () => {
         antialias: true,
       });
       renderer.setSize(container.width, container.height);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
@@ -84,7 +84,7 @@ const Scene = () => {
       let debounce: number | undefined;
       const onTouchStart = (event: TouchEvent) => {
         const element = event.target as HTMLElement;
-        debounce = setTimeout(() => {
+        debounce = window.setTimeout(() => {
           element?.addEventListener("touchmove", (e: TouchEvent) =>
             handleTouchMove(e, (x, y) => (mouse = { x, y }))
           );
@@ -106,8 +106,10 @@ const Scene = () => {
         landingDiv.addEventListener("touchstart", onTouchStart);
         landingDiv.addEventListener("touchend", onTouchEnd);
       }
+      let animId: number;
       const animate = () => {
-        requestAnimationFrame(animate);
+        animId = requestAnimationFrame(animate);
+        if (document.hidden) return;
         if (headBone) {
           handleHeadRotation(
             headBone,
@@ -127,6 +129,7 @@ const Scene = () => {
       };
       animate();
       return () => {
+        cancelAnimationFrame(animId);
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
