@@ -32,7 +32,7 @@ const Scene = () => {
         antialias: true,
       });
       renderer.setSize(container.width, container.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(window.devicePixelRatio);
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
@@ -61,8 +61,14 @@ const Scene = () => {
           let character = gltf.scene;
           setChar(character);
           scene.add(character);
-          headBone = character.getObjectByName("spine006") || null;
-          screenLight = character.getObjectByName("screenlight") || null;
+          headBone =
+            character.getObjectByName("spine006") ||
+            character.getObjectByName("spine.006") ||
+            null;
+          screenLight =
+            character.getObjectByName("screenlight") ||
+            character.getObjectByName("screenLight") ||
+            null;
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();
@@ -109,7 +115,6 @@ const Scene = () => {
       let animId: number;
       const animate = () => {
         animId = requestAnimationFrame(animate);
-        if (document.hidden) return;
         if (headBone) {
           handleHeadRotation(
             headBone,
