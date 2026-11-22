@@ -10,8 +10,14 @@ const ChatLauncher: React.FC = () => {
   return (
     <>
       {open && <ChatPanel onClose={toggle} />}
-      <button className="chat-launcher" onClick={toggle} aria-label="Open chat">
-        💬
+      <button
+        className="chat-launcher"
+        onClick={toggle}
+        aria-label="Ask Manu AI Assistant"
+        title="Ask Manu AI Assistant"
+      >
+        <span className="chat-launcher-icon">💬</span>
+        <span className="chat-launcher-text">ASK MANU</span>
       </button>
     </>
   );

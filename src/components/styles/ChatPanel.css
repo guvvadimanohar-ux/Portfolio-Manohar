@@ -56,8 +56,15 @@
 .chat-header h3 {
   margin: 0;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   color: #ffffff;
+}
+
+.chat-subtitle {
+  font-size: 0.72rem;
+  color: #a0a0a0;
+  display: block;
 }
 
 .close-btn {

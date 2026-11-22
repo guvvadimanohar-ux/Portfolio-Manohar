@@ -18,7 +18,7 @@ const ChatPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
     {
       role: "assistant",
       content:
-        "Hello! I am Manohar's AI portfolio assistant. Feel free to ask me anything about his projects, skills, education, experience, or career focus in Data Science and AI.",
+        "Hello! I am ASK MANU, Manohar's AI portfolio assistant. Feel free to ask me anything about his projects, skills, education, experience, or career focus in Data Science and AI.",
     },
   ]);
   const [input, setInput] = useState("");
@@ -91,11 +91,14 @@ const ChatPanel: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <div className="chat-panel" role="dialog" aria-modal="true" aria-label="Portfolio AI Chat">
+    <div className="chat-panel" role="dialog" aria-modal="true" aria-label="Ask Manu AI Assistant">
       <div className="chat-header">
         <div className="chat-header-info">
           <div className="chat-status-dot"></div>
-          <h3>Manohar's Portfolio Assistant</h3>
+          <div>
+            <h3>ASK MANU</h3>
+            <span className="chat-subtitle">AI Portfolio Assistant</span>
+          </div>
         </div>
         <button onClick={onClose} aria-label="Close chat" className="close-btn" type="button">
           ✕

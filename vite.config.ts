@@ -43,7 +43,7 @@ function devChatApiPlugin(envKey: string | undefined): Plugin {
               return;
             }
 
-            const systemPrompt = `You are a helpful, professional AI portfolio assistant for Guvvadi Manohar.
+            const systemPrompt = `You are ASK MANU, a helpful, professional AI portfolio assistant for Guvvadi Manohar.
 Answer questions accurately, concisely, and conversationally using ONLY the verified facts below.
 If a question is unrelated to Manohar, his portfolio, skills, projects, education, experience, or career goals, politely explain that you can only answer questions about Guvvadi Manohar's portfolio and resume.
 If a detail is not in the profile, state that it is not available in the profile rather than making assumptions.

@@ -39,7 +39,7 @@ export default async function handler(req: ChatRequest, res: ChatResponse) {
       return res.status(500).json({ error: "GROQ_API_KEY is not configured on the server." });
     }
 
-    const systemPrompt = `You are a helpful, professional AI portfolio assistant for Guvvadi Manohar.
+    const systemPrompt = `You are ASK MANU, a helpful, professional AI portfolio assistant for Guvvadi Manohar.
 Answer questions accurately, concisely, and conversationally using ONLY the verified facts below.
 If a question is unrelated to Manohar, his portfolio, skills, projects, education, experience, or career goals, politely explain that you can only answer questions about Guvvadi Manohar's portfolio and resume.
 If a detail is not in the profile, state that it is not available in the profile rather than making assumptions.

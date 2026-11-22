@@ -3,20 +3,34 @@
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  background: var(--accentColor);
-  color: var(--backgroundColor);
-  border: none;
+  padding: 0.65rem 1.15rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #c481ff, #7928ca);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
+  gap: 0.5rem;
+  box-shadow: 0 4px 18px rgba(121, 40, 202, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 9999;
+  font-family: inherit;
 }
+
 .chat-launcher:hover {
-  transform: scale(1.1);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(196, 129, 255, 0.6);
+}
+
+.chat-launcher-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.chat-launcher-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
