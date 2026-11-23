@@ -1,5 +1,5 @@
 import type { IncomingMessage, ServerResponse } from "http";
-import { profile } from "../src/data/profile";
+import { profile } from "../src/data/profile.js";
 
 interface ChatRequest extends IncomingMessage {
   body?: {
