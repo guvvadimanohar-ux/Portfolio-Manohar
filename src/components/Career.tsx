@@ -15,18 +15,6 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Intermediate (MPC) - Marks: 906</h4>
-                <h5>Ramappa Junior College, Telangana</h5>
-              </div>
-              <h3>2020 – 2022</h3>
-            </div>
-            <p>
-              Completed Higher Secondary Education with specialization in Mathematics, Physics, and Chemistry (MPC).
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
                 <h4>B.Tech in Computer Science & Engineering (CGPA: 7.84)</h4>
                 <h5>SVS Group Of Institutions, Telangana</h5>
               </div>

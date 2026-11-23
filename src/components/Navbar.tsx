@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { TbNotes } from "react-icons/tb";
 import "./styles/Navbar.css";
 
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
@@ -42,9 +43,24 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
-          MANOHAR
-        </a>
+        <div className="navbar-left">
+          <a href="/#" className="navbar-title" data-cursor="disable">
+            MANOHAR
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1ZJZvR0tUjEoDEN_LUmvFn6GVXthUmSfP/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="navbar-resume-btn"
+            aria-label="View Resume"
+          >
+            <span className="resume-btn-full">
+              <HoverLinks text="VIEW RESUME" />
+            </span>
+            <span className="resume-btn-short">RESUME</span>
+            <TbNotes />
+          </a>
+        </div>
         <a
           href="mailto:guvvadimanohar@gmail.com"
           className="navbar-connect"

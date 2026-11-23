@@ -90,21 +90,21 @@ const WhatIDo = () => {
               <h3>DEVELOPMENT</h3>
               <h4>Description</h4>
               <p>
-                Developing centralized full-stack web platforms, dynamic user interfaces, and privacy-focused RESTful APIs backed by scalable database architectures.
+                Developing centralized full-stack web platforms, dynamic user interfaces, and privacy-focused FastAPI services backed by scalable database architectures.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Python</div>
-                <div className="what-tags">Java</div>
-                <div className="what-tags">JavaScript</div>
+                <div className="what-tags">FastAPI</div>
+                <div className="what-tags">LangGraph</div>
+                <div className="what-tags">Pydantic</div>
+                <div className="what-tags">LLM API Integration</div>
                 <div className="what-tags">HTML</div>
                 <div className="what-tags">CSS</div>
                 <div className="what-tags">Node.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">MongoDB</div>
                 <div className="what-tags">MySQL</div>
-                <div className="what-tags">PostgreSQL</div>
                 <div className="what-tags">SQLite</div>
+                <div className="what-tags">Qdrant</div>
                 <div className="what-tags">Git</div>
                 <div className="what-tags">GitHub</div>
                 <div className="what-tags">VS Code</div>
